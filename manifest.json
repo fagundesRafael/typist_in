@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Oitiva Assistente",
+    "version": "1.0",
+    "description": "Gera perguntas para oitivas baseado em ocorrências policiais.",
+    "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+    ],
+    "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    }
+    },
+    "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+    },
+    "background": {
+    "service_worker": "background.js"
+    },
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": true
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["config/oitiva_rules.json"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

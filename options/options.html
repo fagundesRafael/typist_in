@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oitiva Assistente - Opções</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+            line-height: 1.5;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+        .steps {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #e67e22;
+        }
+        .steps ol {
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .steps li {
+            margin-bottom: 10px;
+        }
+        .note {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #e74c3c;
+        }
+        img {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oitiva Assistente - Configurações</h1>
+    
+    <div class="info-box">
+        <p>Para utilizar esta extensão, você precisa configurar sua chave API do Google Gemini. A chave API é necessária para gerar perguntas com base no contexto da ocorrência policial.</p>
+        <p>Sua chave API é armazenada apenas localmente no seu navegador e não é compartilhada com ninguém.</p>
+    </div>
+    
+    <h2>Como obter uma chave API do Google Gemini</h2>
+    
+    <div class="steps">
+        <ol>
+            <li>Acesse o <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a> (você precisará fazer login com sua conta Google).</li>
+            <li>Clique em "Get API key" ou "Obter chave API".</li>
+            <li>Se você já tem uma chave API, ela será exibida. Caso contrário, clique em "Create API key" ou "Criar chave API".</li>
+            <li>Dê um nome para sua chave API (por exemplo, "Oitiva Assistente").</li>
+            <li>Copie a chave API gerada e cole-a no campo abaixo.</li>
+        </ol>
+    </div>
+    
+    <div class="form-group">
+        <label for="apiKey">Chave API do Google Gemini:</label>
+        <input type="text" id="apiKey" placeholder="Insira sua chave API aqui (começa com 'AIza...')">
+    </div>
+    
+    <button id="saveButton">Salvar</button>
+    
+    <div id="status" class="status"></div>
+    
+    <div class="note">
+        <p><strong>Importante:</strong> A chave API do Google Gemini é gratuita para uso pessoal, mas tem limites de uso. Consulte a <a href="https://ai.google.dev/pricing" target="_blank">documentação de preços</a> para mais informações.</p>
+        <p>Mantenha sua chave API segura e não a compartilhe com outras pessoas.</p>
+    </div>
+    
+    <script src="options.js"></script>
+</body>
+</html> 
